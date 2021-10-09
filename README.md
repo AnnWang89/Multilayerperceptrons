@@ -6,6 +6,7 @@
 >    java --module-path "C:\javafx-sdk-11.0.2\lib" --add-modules javafx.controls,javafx.fxml -jar multilayerperceptrons.jar
    
 2. 執行介面說明:
+
    ![](https://i.imgur.com/IPlXyG1.png)
 
     * 左方:
@@ -20,6 +21,7 @@
 
 
 3. 執行結果說明:
+
    ![](https://i.imgur.com/QqX92c7.png)
     * 座標上的點:
         * 點的顏色深淺:
