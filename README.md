@@ -66,32 +66,32 @@
             * 判斷有幾筆訓練資料(全部資料的2/3)，幾筆測試資料(全部資料的1/3)。
             *  初始鍵結值(initial_w())。
             *  進行訓練:
-           	 ```
-		    //前饋
-		    for(j=0;j<Neu_numbers;j++)
-			if(j<Neurons)//第一層
-			    v=∑(W [j] *data_x);
-			else//不是第一層
-				v= ∑(W [j] *y);//the layer calculate by the before output	
-			 y=y_function(v);
+            ```
+            //前饋
+            for(j=0;j<Neu_numbers;j++)
+                if(j<Neurons)//第一層
+                    v=∑(W [j] *data_x);
+                else//不是第一層
+                        v= ∑(W [j] *y);//the layer calculate by the before output	
+                 y=y_function(v);
 
-		    //倒傳遞
-		    for(j=Neu_numbers-1;j>=0;j--) //從後面看回來
-			if(j==Neu_numbers-1)//輸出層
-			    Delta[j]= (desire_output-y)*y*(1-y);
-			else if(j/Neurons==hidden_layer-1)//最後一層隱藏層					
-			Delta[j]=y*(1-y)*(Delta[Neu_numbers-1]*W);
-			else //其他隱藏層
-			    Delta_x_W=Delta_x_W+Delta*W;
-			    Delta[j]=y*(1-y)*Delta_x_W;
-		    //調整鍵結值
-		    for(j=0;j<Neu_numbers;j++)
-			if(j/Neurons==0) //第一層隱藏層
-			    W [j] =W [j] +Learningrate*Delta[j]* data_x;
-			Else//其他隱藏層
-			    W [j] =W [j]+Learningrate*Delta[j]*y;
-		```
-            * 根據訓練的結果進行測試。
+            //倒傳遞
+            for(j=Neu_numbers-1;j>=0;j--) //從後面看回來
+                if(j==Neu_numbers-1)//輸出層
+                    Delta[j]= (desire_output-y)*y*(1-y);
+                else if(j/Neurons==hidden_layer-1)//最後一層隱藏層					
+                Delta[j]=y*(1-y)*(Delta[Neu_numbers-1]*W);
+                else //其他隱藏層
+                    Delta_x_W=Delta_x_W+Delta*W;
+                    Delta[j]=y*(1-y)*Delta_x_W;
+            //調整鍵結值
+            for(j=0;j<Neu_numbers;j++)
+                if(j/Neurons==0) //第一層隱藏層
+                    W [j] =W [j] +Learningrate*Delta[j]* data_x;
+                Else//其他隱藏層
+                    W [j] =W [j]+Learningrate*Delta[j]*y;
+            ```
+            *  根據訓練的結果進行測試。
             * 計算訓練與測試辨識率與均方根誤差。
 	    * **initial_w(int)**:隨機初始鍵結值。
         * **v_function(int,int)**:神經元內部激發狀態。
