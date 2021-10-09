@@ -1,5 +1,5 @@
+###### tags: `類神經網路作業`
 # Multilayerperceptrons
-Neural Networks Homework2
 
 1. 程式執行說明:
    執行檔**multilayerperceptrons.jar**要用命令題是字元開啟，並且要先下載JavaFX:
@@ -36,7 +36,7 @@ Neural Networks Homework2
 
 
 4. 程式碼簡介:
-   程式用Java編寫，使用JavaFX與scene builder的GUI完成最後結果。 使用多層感知機來實作，且可以調整隱藏層數與隱藏層神經元數，輸出層為一個神經元，根據最後輸出判斷分成哪一類(以兩類的資料為例，輸出介於0~0.5分為第一類，介於0.5~1分為第二類)。
+   程式用Java編寫，使用JavaFX與scene builder的GUI完成最後結果。 使用多層感知機來實作，且可以調整隱藏層數與隱藏層神經元數，輸出層為一個神經元，根據最後輸出判斷分成哪一類(以兩類的資料為例，輸出介於 0~0.5 分為第一類，介於 0.5~1 分為第二類)。
     * 程式碼分為兩個檔案
         * multilayerperceptrons: 為主程式檔，讀取fxml檔並建立GUI。
 	    * MainController: 為控制介面的檔案，大部分的運算與操作也在此設定。以下程式碼說明以此檔為主。	
